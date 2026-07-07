@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Drawable opsional: hanya diperlukan jika memakai Button biasa (bukan MaterialButton). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/purple_primary" />
+    <corners android:radius="28dp" />
+</shape>

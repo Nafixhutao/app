@@ -4,165 +4,146 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/brutal_bg">
+    android:background="@color/brutal_bg"
+    android:padding="16dp">
 
-    <!-- ===== JUDUL BESAR ===== -->
+    <!-- ===== JUDUL ===== -->
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TOMBOL\nAPP"
+        android:text="DRAW APP"
         android:textColor="@color/brutal_black"
-        android:textSize="52sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         android:fontFamily="monospace"
-        android:includeFontPadding="false"
-        android:lineSpacingMultiplier="0.95"
         android:letterSpacing="-0.02"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="64dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="★ NEO-BRUTALISM EDITION ★"
+        android:text="★ by SYED NAFI HOOSAIN ★"
         android:textColor="@color/brutal_white"
-        android:textSize="13sp"
+        android:textSize="11sp"
         android:textStyle="bold"
         android:fontFamily="monospace"
         android:background="@color/brutal_black"
-        android:paddingHorizontal="10dp"
-        android:paddingVertical="4dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"
-        app:layout_constraintStart_toStartOf="@id/tv_title"
-        android:layout_marginTop="12dp" />
-
-    <!-- ===== PANEL COUNTER (angka besar dari SQLite) ===== -->
-    <TextView
-        android:id="@+id/tv_count_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TOTAL PENEKANAN"
-        android:textColor="@color/brutal_white"
-        android:textSize="11sp"
-        android:textStyle="bold"
-        android:fontFamily="monospace"
-        android:letterSpacing="0.15"
-        android:background="@drawable/brutal_badge"
-        android:paddingHorizontal="10dp"
-        android:paddingVertical="4dp"
-        app:layout_constraintStart_toStartOf="@id/panel_count"
-        app:layout_constraintBottom_toTopOf="@id/panel_count"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="-6dp" />
-
-    <TextView
-        android:id="@+id/panel_count"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="@drawable/brutal_counter"
-        android:minHeight="120dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp">
-
-        <!-- placeholder tinggi; angka digambar oleh tv_count di dalamnya -->
-    </TextView>
-
-    <TextView
-        android:id="@+id/tv_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="@color/brutal_black"
-        android:textSize="64sp"
-        android:textStyle="bold"
-        android:fontFamily="monospace"
-        android:includeFontPadding="false"
-        app:layout_constraintTop_toTopOf="@id/panel_count"
-        app:layout_constraintBottom_toBottomOf="@id/panel_count"
-        app:layout_constraintStart_toStartOf="@id/panel_count"
-        app:layout_constraintEnd_toEndOf="@id/panel_count" />
-
-    <!-- ===== TOMBOL BRUTALISM ===== -->
-    <Button
-        android:id="@+id/btn_tekan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TEKAN SAYA"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:fontFamily="monospace"
-        android:letterSpacing="0.05"
-        android:textColor="@color/brutal_white"
-        android:background="@drawable/brutal_button"
-        android:paddingHorizontal="44dp"
-        android:paddingVertical="22dp"
-        android:stateListAnimator="@null"
-        app:layout_constraintTop_toBottomOf="@id/panel_count"
-        app:layout_constraintBottom_toTopOf="@id/card_name"
-        app:layout_constraintStart_toStartOf="parent"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- hint reset -->
-    <TextView
-        android:id="@+id/tv_hint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="(tahan tombol untuk reset)"
-        android:textColor="@color/brutal_black"
-        android:textSize="11sp"
-        android:fontFamily="monospace"
-        app:layout_constraintTop_toBottomOf="@id/btn_tekan"
-        app:layout_constraintStart_toStartOf="@id/btn_tekan"
-        app:layout_constraintEnd_toEndOf="@id/btn_tekan"
-        android:layout_marginTop="14dp" />
-
-    <!-- ===== KARTU NAMA (bawah) ===== -->
-    <TextView
-        android:id="@+id/tv_badge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CREATED BY"
-        android:textColor="@color/brutal_white"
-        android:textSize="11sp"
-        android:textStyle="bold"
-        android:fontFamily="monospace"
-        android:letterSpacing="0.15"
-        android:background="@drawable/brutal_badge"
-        android:paddingHorizontal="10dp"
-        android:paddingVertical="4dp"
-        app:layout_constraintStart_toStartOf="@id/card_name"
-        app:layout_constraintBottom_toTopOf="@id/card_name"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="-6dp" />
-
-    <TextView
-        android:id="@+id/card_name"
+    <!-- ===== KANVAS GAMBAR ===== -->
+    <FrameLayout
+        android:id="@+id/canvas_frame"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="SYED NAFI HOOSAIN"
-        android:textColor="@color/brutal_black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:fontFamily="monospace"
-        android:letterSpacing="0.02"
-        android:gravity="center"
-        android:background="@drawable/brutal_card"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:background="@drawable/brutal_counter"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintBottom_toTopOf="@id/palette"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="48dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <com.example.tombolapp.DrawView
+            android:id="@+id/draw_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp" />
+    </FrameLayout>
+
+    <!-- ===== PALET WARNA ===== -->
+    <LinearLayout
+        android:id="@+id/palette"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/actions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp">
+
+        <View
+            android:id="@+id/color_black"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/swatch_black"
+            android:layout_marginHorizontal="5dp" />
+
+        <View
+            android:id="@+id/color_pink"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/swatch_pink"
+            android:layout_marginHorizontal="5dp" />
+
+        <View
+            android:id="@+id/color_cyan"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/swatch_cyan"
+            android:layout_marginHorizontal="5dp" />
+
+        <View
+            android:id="@+id/color_blue"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/swatch_blue"
+            android:layout_marginHorizontal="5dp" />
+
+        <View
+            android:id="@+id/color_eraser"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/swatch_eraser"
+            android:layout_marginHorizontal="5dp" />
+    </LinearLayout>
+
+    <!-- ===== TOMBOL AKSI ===== -->
+    <LinearLayout
+        android:id="@+id/actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btn_undo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="UNDO"
+            android:textColor="@color/brutal_black"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:background="@drawable/brutal_button_light"
+            android:stateListAnimator="@null"
+            android:layout_marginEnd="8dp"
+            android:paddingVertical="18dp" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HAPUS"
+            android:textColor="@color/brutal_white"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:background="@drawable/brutal_button"
+            android:stateListAnimator="@null"
+            android:paddingVertical="18dp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

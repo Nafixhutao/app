@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Saat ditekan: tombol "turun" menutupi bayangan (shadow menghilang, permukaan geser ke kanan-bawah) -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="8dp" android:top="8dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/brutal_accent_dark" />
+            <stroke android:width="4dp" android:color="@color/brutal_black" />
+        </shape>
+    </item>
+</layer-list>

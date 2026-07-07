@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- State selector: ganti tampilan tombol saat ditekan -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/brutal_button_pressed" />
+    <item android:drawable="@drawable/brutal_button_normal" />
+</selector>
